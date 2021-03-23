@@ -25,7 +25,7 @@ const upload = multer({
 });
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
-const db = mongoose.createConnection(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.createConnection(process.env.MONGOLAB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const { Schema } = mongoose;
 const fileSchema = new Schema({
   createdAt: {
@@ -34,7 +34,7 @@ const fileSchema = new Schema({
   },
   name: {
     type: String,
-    required: [true, "Uploaded file must have a name"],
+    required: [true, "Uploaded file must have a name of file"],
   },
   type: {
     type: String,
