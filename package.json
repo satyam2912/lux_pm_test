@@ -4,14 +4,17 @@
   "description": "API project for freeCodeCamp",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "stop-win": "Taskkill /IM node.exe /F",
+    "stop-linux": "killall node"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.2",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "python-shell": "^3.0.0"
   },
   "repository": {
     "type": "git",
